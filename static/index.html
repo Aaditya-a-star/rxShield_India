@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RxShield India | Prescription Safety Checker for Indian Brand Medicines</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-['Plus_Jakarta_Sans',sans-serif]">
+
+  <!-- Top Announcement / Hackathon Ribbon -->
+  <div class="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 text-white text-xs font-medium py-1.5 px-4 text-center flex items-center justify-center gap-2 shadow-sm">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-white text-emerald-800 uppercase tracking-wider">Hackathon Project</span>
+    <span>Prescription Safety Checker for Indian Brand Medicines, Hidden Combinations & DDI Matrix</span>
+    <span class="hidden md:inline-block text-emerald-200">| Powered by SQLite & Anti-Alert Fatigue Engine</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 text-slate-950 font-black text-xl">
+          <i data-lucide="shield-alert" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">RxShield <span class="text-emerald-400">India</span></h1>
+            <span class="text-[10px] bg-slate-800 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-mono font-semibold">v2.0 Live DB</span>
+          </div>
+          <p class="text-[11px] text-slate-400">Indian Brand De-obfuscation & Anti-Fatigue Triage</p>
+        </div>
+      </div>
+
+      <!-- Center Nav Tabs -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700/60">
+        <button id="nav-btn-checker" onclick="switchTab('checker')" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white shadow-sm transition">Safety Checker</button>
+        <button id="nav-btn-db" onclick="switchTab('db')" class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-300 hover:text-white transition">Database Explorer</button>
+        <button id="nav-btn-history" onclick="switchTab('history')" class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-300 hover:text-white transition">Audit History</button>
+        <button id="nav-btn-architecture" onclick="switchTab('architecture')" class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-300 hover:text-white transition">Clinical Architecture</button>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 bg-emerald-950/50 border border-emerald-500/30 px-3 py-1.5 rounded-lg text-xs text-emerald-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="db-status-text">SQLite Connected</span>
+        </div>
+        <button onclick="openAddBrandModal()" class="flex items-center gap-1.5 text-xs bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 px-3 py-1.5 rounded-lg font-medium transition">
+          <i data-lucide="plus-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Add Indian Brand</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- TAB 1: SAFETY CHECKER VIEW -->
+    <div id="tab-checker" class="space-y-6">
+
+      <!-- Sample Clinical Trap Cases (Instant Presets for Judges) -->
+      <div class="bg-gradient-to-r from-slate-800/90 to-slate-800/50 border border-slate-700/70 rounded-2xl p-4 shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <span class="p-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <i data-lucide="zap" class="w-4 h-4"></i>
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Hackathon Clinical Benchmark Traps (One-Click Demos)</span>
+          </div>
+          <span class="text-xs text-slate-400">Click any trap below to instantly populate clinical scenario</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5" id="samples-container">
+          <!-- Dynamically populated or fallback -->
+          <button onclick="loadSampleCase('case_1')" class="p-3 text-left rounded-xl bg-slate-900/80 hover:bg-slate-700/70 border border-slate-700/60 hover:border-amber-500/50 transition group">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Trap 1: Hidden Duplication</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 text-slate-500 group-hover:text-amber-400 transition"></i>
+            </div>
+            <p class="text-xs font-semibold text-slate-200 truncate">Dolo 650 + Combiflam + Zerodol-P</p>
+            <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">Hidden Paracetamol toxicity & dual NSAID GI bleed.</p>
+          </button>
+
+          <button onclick="loadSampleCase('case_2')" class="p-3 text-left rounded-xl bg-slate-900/80 hover:bg-slate-700/70 border border-slate-700/60 hover:border-red-500/50 transition group">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">Trap 2: Triple Whammy AKI</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 text-slate-500 group-hover:text-rose-400 transition"></i>
+            </div>
+            <p class="text-xs font-semibold text-slate-200 truncate">Metformin + Telma-H + Combiflam</p>
+            <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">eGFR 26 renal collapse + Metformin Lactic Acidosis.</p>
+          </button>
+
+          <button onclick="loadSampleCase('case_3')" class="p-3 text-left rounded-xl bg-slate-900/80 hover:bg-slate-700/70 border border-slate-700/60 hover:border-orange-500/50 transition group">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider">Trap 3: Cardio-GI Risk</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 text-slate-500 group-hover:text-orange-400 transition"></i>
+            </div>
+            <p class="text-xs font-semibold text-slate-200 truncate">Clopilet + Ecosprin + Omez + Voveran</p>
+            <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">CYP2C19 antiplatelet failure + massive ulcer risk.</p>
+          </button>
+
+          <button onclick="loadSampleCase('case_4')" class="p-3 text-left rounded-xl bg-slate-900/80 hover:bg-slate-700/70 border border-slate-700/60 hover:border-sky-500/50 transition group">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider">Trap 4: Pediatric & Chelation</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 text-slate-500 group-hover:text-sky-400 transition"></i>
+            </div>
+            <p class="text-xs font-semibold text-slate-200 truncate">Cifran 500 + Shelcal 500 in 8yo</p>
+            <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">Calcium binds antibiotic + pediatric overdose.</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Patient Demographics Bar -->
+      <div class="bg-slate-800/70 border border-slate-700/70 rounded-2xl p-4 shadow-lg">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <i data-lucide="user-check" class="w-4 h-4 text-emerald-400"></i>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300">Patient Demographics & Organ Function</h3>
+          </div>
+          <span class="text-xs text-slate-400 font-mono" id="egfr-display-badge">eGFR: 90 mL/min (Normal)</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <!-- Patient Name -->
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Patient Name</label>
+            <input type="text" id="patient-name" value="Ramesh Verma" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+          <!-- Age -->
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Age (Years)</label>
+            <input type="number" id="patient-age" value="34" min="0" max="120" onchange="updatePatientCalculations()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+          <!-- Gender -->
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Gender</label>
+            <select id="patient-gender" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <!-- Weight -->
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Weight (kg)</label>
+            <input type="number" id="patient-weight" value="68" min="2" max="250" onchange="updatePatientCalculations()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+          <!-- eGFR / Renal Function -->
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">eGFR (mL/min)</label>
+            <input type="number" id="patient-egfr" value="95" min="5" max="180" oninput="onEgfrChange(this.value)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500 font-mono">
+          </div>
+          <!-- Pregnant Toggle -->
+          <div class="flex flex-col justify-center">
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Pregnant?</label>
+            <label class="relative inline-flex items-center cursor-pointer mt-0.5">
+              <input type="checkbox" id="patient-pregnant" class="sr-only peer">
+              <div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-rose-600"></div>
+              <span class="ml-2 text-xs font-medium text-slate-300">Yes</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- eGFR Visual Indicator Slider Bar -->
+        <div class="mt-3 pt-3 border-t border-slate-700/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-400 text-[11px]">CKD Classification:</span>
+            <span id="ckd-stage-pill" class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Stage 1 (Normal renal reserves)</span>
+          </div>
+          <div class="flex items-center gap-3 text-[11px] text-slate-400">
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span>&gt;60 Normal</span>
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span>30-59 Moderate</span>
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-rose-500"></span>&lt;30 Severe (MALA/AKI risk)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Two-Column Prescription & Safety Triage Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- LEFT COLUMN: Prescription Input & Quick Adders (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 shadow-xl flex flex-col h-full">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i>
+                <h3 class="text-sm font-bold text-slate-200">Typed Prescription</h3>
+              </div>
+              <button onclick="clearPrescription()" class="text-xs text-slate-400 hover:text-rose-400 flex items-center gap-1 transition">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Clear
+              </button>
+            </div>
+
+            <!-- Free text prescription input -->
+            <div class="relative flex-1">
+              <textarea id="prescription-input" rows="8" placeholder="Type or paste Indian prescription here...&#10;Examples:&#10;1. Tab Dolo 650 1 tab TDS x 5 days&#10;2. Tab Combiflam 1 tab BD SOS&#10;3. Tab Pan-D 1 cap OD (BBF)&#10;4. Tab Augmentin 625 Duo 1 BD&#10;5. Tab Telma-H 1 OD" 
+                class="w-full h-56 bg-slate-950/80 border border-slate-700/80 rounded-xl p-3.5 text-xs font-mono text-emerald-300 leading-relaxed placeholder-slate-500 focus:outline-none focus:border-emerald-500 resize-none shadow-inner"></textarea>
+            </div>
+
+            <!-- Quick Add Brand Pills (Top Indian Brands) -->
+            <div class="mt-4 pt-3 border-t border-slate-700/60">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-semibold text-slate-400">Quick-Add Popular Indian Brands:</span>
+                <span class="text-[10px] text-slate-500">Click to append</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5" id="quick-brand-chips">
+                <!-- Pills populated via JS or static -->
+                <button onclick="appendBrand('Tab Dolo 650 1 tab TDS')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Dolo 650 TDS</button>
+                <button onclick="appendBrand('Tab Combiflam 1 tab BD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Combiflam BD</button>
+                <button onclick="appendBrand('Tab Zerodol-P 1 tab BD SOS')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Zerodol-P BD</button>
+                <button onclick="appendBrand('Cap Pan-D 1 cap OD BBF')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Pan-D OD</button>
+                <button onclick="appendBrand('Tab Augmentin 625 Duo 1 tab BD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Augmentin 625</button>
+                <button onclick="appendBrand('Tab Telma-H 1 tab OD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Telma-H OD</button>
+                <button onclick="appendBrand('Tab Glycomet-GP 2 1 tab BD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Glycomet-GP 2</button>
+                <button onclick="appendBrand('Tab Shelcal 500 1 tab OD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Shelcal 500</button>
+                <button onclick="appendBrand('Tab Cifran 500 1 tab BD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Cifran 500</button>
+                <button onclick="appendBrand('Tab Clopilet 75 1 tab OD')" class="px-2 py-1 bg-slate-700/60 hover:bg-slate-700 text-slate-300 text-[11px] rounded-md border border-slate-600/50 hover:border-emerald-400 transition">+ Clopilet 75</button>
+              </div>
+            </div>
+
+            <!-- Indian Abbreviations Cheat Sheet Tooltip/Drawer -->
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-[11px] text-slate-400">
+              <span class="font-bold text-slate-300">Supported Abbreviations:</span>
+              OD (1x), BD/1-0-1 (2x), TDS/1-1-1 (3x), QID (4x), SOS (as needed), HS (bedtime), BBF/AC (before food), PC (after food).
+            </div>
+
+            <!-- Primary Analyze Action Button -->
+            <button id="btn-run-check" onclick="runSafetyAnalysis()" class="mt-4 w-full py-3 px-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition active:scale-[0.99]">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+              <span class="text-sm">Run Safety & Interaction Check</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Safety Triage, Anti-Alert Fatigue Engine & Active Molecules (7 cols) -->
+        <div class="lg:col-span-7 space-y-4">
+
+          <!-- Results Summary Header & Anti-Fatigue Mode Bar -->
+          <div class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-4 shadow-xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="text-sm font-bold text-slate-200">Clinical Safety Dashboard</h3>
+                  <span id="analysis-status-pill" class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-700 text-slate-300">Ready</span>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-0.5">Automated brand deconstruction & tiered alert triage</p>
+              </div>
+
+              <!-- Anti-Alert Fatigue Mode Toggle (Problem Statement Requirement!) -->
+              <div class="flex items-center gap-2 bg-slate-900/90 border border-slate-700 px-3 py-1.5 rounded-xl">
+                <i data-lucide="bell-ring" class="w-3.5 h-3.5 text-amber-400"></i>
+                <div class="flex flex-col">
+                  <span class="text-[11px] font-bold text-slate-200">Anti-Alert Fatigue</span>
+                  <span class="text-[9px] text-slate-400">Silences minor noise</span>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer ml-1">
+                  <input type="checkbox" id="toggle-anti-fatigue" checked onchange="toggleAntiFatigueView()" class="sr-only peer">
+                  <div class="w-8 h-4 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-emerald-500"></div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Quick Metrics Cards -->
+            <div class="grid grid-cols-4 gap-2 mt-4">
+              <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-2.5 text-center">
+                <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider block">Brands</span>
+                <span id="stat-brands" class="text-lg font-bold text-slate-200">0</span>
+              </div>
+              <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-2.5 text-center">
+                <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider block">Active APIs</span>
+                <span id="stat-molecules" class="text-lg font-bold text-cyan-400">0</span>
+              </div>
+              <div class="bg-slate-900/70 border border-rose-950/60 rounded-xl p-2.5 text-center">
+                <span class="text-[10px] font-semibold text-rose-400 uppercase tracking-wider block">Critical</span>
+                <span id="stat-critical" class="text-lg font-bold text-rose-500">0</span>
+              </div>
+              <div class="bg-slate-900/70 border border-amber-950/60 rounded-xl p-2.5 text-center">
+                <span class="text-[10px] font-semibold text-amber-400 uppercase tracking-wider block">Moderate</span>
+                <span id="stat-moderate" class="text-lg font-bold text-amber-400">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parsed Brands & Active Ingredient Deconstruction Matrix -->
+          <div id="section-breakdown" class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-4 shadow-xl hidden">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Active Ingredient & Cumulative Daily Dose Matrix</h4>
+              </div>
+              <span class="text-[11px] text-slate-400">De-obfuscating Indian FDCs</span>
+            </div>
+
+            <div id="active-molecules-list" class="space-y-3">
+              <!-- Dynamically rendered active ingredient cards with visual dose progress bars -->
+            </div>
+          </div>
+
+          <!-- ALERT STREAM (TIER 1 & 2: CRITICAL & MODERATE) -->
+          <div id="section-alerts" class="space-y-3">
+            <!-- Initial placeholder before check -->
+            <div id="alerts-empty-state" class="bg-slate-800/40 border border-dashed border-slate-700 rounded-2xl p-8 text-center">
+              <div class="w-12 h-12 rounded-full bg-slate-800 mx-auto flex items-center justify-center text-slate-500 mb-3">
+                <i data-lucide="stethoscope" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-slate-300">No prescription analyzed yet</h4>
+              <p class="text-xs text-slate-500 max-w-sm mx-auto mt-1">Select one of the sample traps above or type a prescription on the left to inspect active ingredients, duplications and interactions.</p>
+            </div>
+
+            <!-- Critical Alerts Container -->
+            <div id="critical-alerts-container" class="space-y-3"></div>
+
+            <!-- Moderate Alerts Container -->
+            <div id="moderate-alerts-container" class="space-y-3"></div>
+
+            <!-- Minor / Advisory Tray (Anti-Alert Fatigue Collapsible) -->
+            <div id="minor-alerts-wrapper" class="hidden">
+              <button onclick="toggleMinorTray()" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 text-xs text-slate-400 transition">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-sky-400"></i>
+                  <span class="font-semibold text-slate-300">Informational Advisories & Minor Interactions (<span id="minor-count-badge">0</span>)</span>
+                  <span class="text-[10px] bg-slate-700 text-slate-300 px-1.5 py-0.5 rounded">Sequestered by Anti-Fatigue Engine</span>
+                </div>
+                <i id="minor-tray-chevron" data-lucide="chevron-down" class="w-4 h-4 transition-transform"></i>
+              </button>
+              <div id="minor-alerts-container" class="space-y-2 mt-2 hidden"></div>
+            </div>
+          </div>
+
+          <!-- Export Report / Pharmacist Verification Button -->
+          <div id="section-export-bar" class="hidden flex items-center justify-end gap-3 pt-2">
+            <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-semibold rounded-xl transition">
+              <i data-lucide="printer" class="w-4 h-4 text-emerald-400"></i>
+              <span>Print Clinical Safety Audit</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: DATABASE EXPLORER VIEW (100+ Brands & Interactions) -->
+    <div id="tab-db" class="space-y-6 hidden">
+      <div class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-100 flex items-center gap-2">
+              <i data-lucide="database" class="w-5 h-5 text-emerald-400"></i>
+              Indian Pharmaceutical Brand Knowledge Base (SQLite)
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Explore active ingredients, combination formulations, schedules, and clinical interactions</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="text" id="db-search-input" onkeyup="filterDatabaseTable()" placeholder="Search brand or ingredient (e.g. Combiflam, Paracetamol)..." 
+              class="w-72 bg-slate-900 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+            <button onclick="openAddBrandModal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-xs rounded-xl flex items-center gap-1.5 transition">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add Brand
+            </button>
+          </div>
+        </div>
+
+        <!-- Brands Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-700/70">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900/90 text-[11px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-700/70">
+              <tr>
+                <th class="py-3 px-4">Brand Name</th>
+                <th class="py-3 px-4">Manufacturer</th>
+                <th class="py-3 px-4">Dosage Form</th>
+                <th class="py-3 px-4">Schedule</th>
+                <th class="py-3 px-4">Active Ingredient(s) & Strength</th>
+              </tr>
+            </thead>
+            <tbody id="db-brands-table-body" class="divide-y divide-slate-800 bg-slate-900/40">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: AUDIT HISTORY VIEW -->
+    <div id="tab-history" class="space-y-6 hidden">
+      <div class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-100 flex items-center gap-2">
+              <i data-lucide="clock-rewind" class="w-5 h-5 text-cyan-400"></i>
+              Clinical Prescription Audit Log
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Persisted in SQLite database `prescriptions_history` for medico-legal tracking</p>
+          </div>
+          <button onclick="loadAuditHistory()" class="text-xs text-emerald-400 hover:text-emerald-300 flex items-center gap-1 font-semibold">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Refresh Log
+          </button>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-700/70">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900/90 text-[11px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-700/70">
+              <tr>
+                <th class="py-3 px-4">Audit ID</th>
+                <th class="py-3 px-4">Timestamp</th>
+                <th class="py-3 px-4">Patient Name / Age</th>
+                <th class="py-3 px-4">Critical Alerts</th>
+                <th class="py-3 px-4">Moderate Alerts</th>
+                <th class="py-3 px-4">Prescription Extract</th>
+              </tr>
+            </thead>
+            <tbody id="db-history-table-body" class="divide-y divide-slate-800 bg-slate-900/40">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: CLINICAL ARCHITECTURE VIEW (For Hackathon Judges) -->
+    <div id="tab-architecture" class="space-y-6 hidden">
+      <div class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-6 shadow-xl space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="cpu" class="w-5 h-5 text-emerald-400"></i>
+            Clinical Safety Architecture & Anti-Alert Fatigue Engine
+          </h3>
+          <p class="text-xs text-slate-400 mt-1">Designed in accordance with Indian Pharmacopoeia, Central Drugs Standard Control Organisation (CDSCO), and clinical pharmacology guidelines.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-2 font-bold">1</div>
+            <h4 class="text-xs font-bold text-slate-200">Brand De-obfuscation Engine</h4>
+            <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Deconstructs Indian commercial trade names (Combiflam, Zerodol-SP, Pan-D, Augmentin Duo) into discrete active pharmaceutical ingredients (APIs) and standardizes dosages.</p>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center mb-2 font-bold">2</div>
+            <h4 class="text-xs font-bold text-slate-200">Organ & Demographics Guard</h4>
+            <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Calculates patient-specific maximum ceilings: weight-based pediatrics (mg/kg/dose), geriatric renal/hepatic safety margins, and eGFR CKD staging contraindications.</p>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+            <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center mb-2 font-bold">3</div>
+            <h4 class="text-xs font-bold text-slate-200">Anti-Alert Fatigue Triage</h4>
+            <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Explicitly addresses the problem statement's warning on alert fatigue: filters low-yield noise, categorizing findings into Critical (immediate harm), Moderate (timing/adjust), and Minor (collapsible).</p>
+          </div>
+        </div>
+
+        <!-- Technical Flow Chart Diagram -->
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Prescription Safety Pipeline</h4>
+          <div class="flex flex-col md:flex-row items-center justify-between text-xs font-mono text-center gap-2">
+            <div class="p-2.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 w-full md:w-auto">Typed Rx & Indian Sig (OD, BD, TDS)</div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 hidden md:block"></i>
+            <div class="p-2.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 w-full md:w-auto">Regex & NLP Brand Matcher</div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 hidden md:block"></i>
+            <div class="p-2.5 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700 w-full md:w-auto">SQLite FDC Decomposition</div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 hidden md:block"></i>
+            <div class="p-2.5 rounded-lg bg-slate-800 text-amber-300 border border-slate-700 w-full md:w-auto">Cross-Pair DDI & Dose Summation</div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 hidden md:block"></i>
+            <div class="p-2.5 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-500/40 w-full md:w-auto font-bold">Anti-Fatigue Triage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ADD CUSTOM BRAND MODAL -->
+  <div id="modal-add-brand" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="plus-circle" class="w-5 h-5 text-emerald-400"></i>
+          Add New Indian Brand to Database
+        </h3>
+        <button onclick="closeAddBrandModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p class="text-xs text-slate-400">Add an Indian commercial brand or combination formulation to SQLite.</p>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Brand Name *</label>
+          <input type="text" id="modal-brand-name" placeholder="e.g. Sudafed Plus, Febrex Plus" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Manufacturer</label>
+            <input type="text" id="modal-brand-mfg" placeholder="e.g. Cipla, Sun Pharma" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Form</label>
+            <select id="modal-brand-form" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+              <option value="Tablet">Tablet</option>
+              <option value="Capsule">Capsule</option>
+              <option value="Syrup">Syrup</option>
+              <option value="Injection">Injection</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Active Ingredient 1 & Strength (mg) *</label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" id="modal-ing-1-name" placeholder="e.g. Paracetamol" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+            <input type="number" id="modal-ing-1-strength" placeholder="Strength (mg) e.g. 500" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Active Ingredient 2 (Optional Combo)</label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" id="modal-ing-2-name" placeholder="e.g. Phenylephrine" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+            <input type="number" id="modal-ing-2-strength" placeholder="Strength (mg) e.g. 10" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex justify-end gap-2">
+        <button onclick="closeAddBrandModal()" class="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:bg-slate-800">Cancel</button>
+        <button onclick="submitNewBrand()" class="px-4 py-2 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-slate-950">Save to SQLite</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

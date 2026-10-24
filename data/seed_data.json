@@ -1,0 +1,1171 @@
+{
+  "ingredients": [
+    {
+      "name": "Paracetamol",
+      "aliases": ["Acetaminophen", "PCM", "APAP"],
+      "drug_class": "Analgesic / Antipyretic",
+      "adult_max_daily_mg": 4000,
+      "geriatric_max_daily_mg": 2500,
+      "pediatric_dose_mg_per_kg_dose": 15,
+      "pediatric_max_daily_mg_per_kg": 60,
+      "renal_notes": "No reduction usually needed; caution in severe hepatic impairment or chronic alcoholism (max 2000mg/day).",
+      "pregnancy_category": "B",
+      "notes": "Hepatotoxicity risk when cumulative daily intake exceeds 4000mg in adults."
+    },
+    {
+      "name": "Ibuprofen",
+      "aliases": ["Ibu"],
+      "drug_class": "NSAID",
+      "adult_max_daily_mg": 2400,
+      "geriatric_max_daily_mg": 1200,
+      "pediatric_dose_mg_per_kg_dose": 10,
+      "pediatric_max_daily_mg_per_kg": 40,
+      "renal_notes": "Avoid in severe renal impairment (eGFR < 30). Increases risk of acute renal failure and fluid retention.",
+      "pregnancy_category": "D",
+      "notes": "GI ulceration, cardiovascular thrombotic events risk with prolonged high dose."
+    },
+    {
+      "name": "Aceclofenac",
+      "aliases": [],
+      "drug_class": "NSAID",
+      "adult_max_daily_mg": 200,
+      "geriatric_max_daily_mg": 100,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Avoid if eGFR < 30. Use lowest effective dose in mild-to-moderate impairment.",
+      "pregnancy_category": "D",
+      "notes": "Widely prescribed in India for osteoarthritis and musculoskeletal pain. Not recommended in pediatrics."
+    },
+    {
+      "name": "Diclofenac",
+      "aliases": [],
+      "drug_class": "NSAID",
+      "adult_max_daily_mg": 150,
+      "geriatric_max_daily_mg": 75,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Contraindicated in severe renal failure. Monitor renal function closely.",
+      "pregnancy_category": "D",
+      "notes": "High risk of GI bleeding and cardiovascular events."
+    },
+    {
+      "name": "Mefenamic Acid",
+      "aliases": [],
+      "drug_class": "NSAID",
+      "adult_max_daily_mg": 1500,
+      "geriatric_max_daily_mg": 750,
+      "pediatric_dose_mg_per_kg_dose": 6.5,
+      "pediatric_max_daily_mg_per_kg": 25,
+      "renal_notes": "Avoid in significant renal impairment.",
+      "pregnancy_category": "C",
+      "notes": "Frequently used for dysmenorrhea and spasmodic colic."
+    },
+    {
+      "name": "Dicyclomine",
+      "aliases": ["Dicycloverine"],
+      "drug_class": "Antispasmodic / Anticholinergic",
+      "adult_max_daily_mg": 80,
+      "geriatric_max_daily_mg": 40,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Use caution in renal dysfunction.",
+      "pregnancy_category": "B",
+      "notes": "Contraindicated in infants < 6 months due to respiratory collapse risk."
+    },
+    {
+      "name": "Amoxicillin",
+      "aliases": ["Amox"],
+      "drug_class": "Penicillin Antibiotic",
+      "adult_max_daily_mg": 3000,
+      "geriatric_max_daily_mg": 2000,
+      "pediatric_dose_mg_per_kg_dose": 25,
+      "pediatric_max_daily_mg_per_kg": 90,
+      "renal_notes": "Reduce dose or extend interval if eGFR < 30 mL/min (max 500mg every 12h).",
+      "pregnancy_category": "B",
+      "notes": "Watch for hypersensitivity/penicillin allergy."
+    },
+    {
+      "name": "Clavulanic Acid",
+      "aliases": ["Clavulanate"],
+      "drug_class": "Beta-lactamase Inhibitor",
+      "adult_max_daily_mg": 500,
+      "geriatric_max_daily_mg": 375,
+      "pediatric_dose_mg_per_kg_dose": 6.4,
+      "pediatric_max_daily_mg_per_kg": 20,
+      "renal_notes": "Adjust with amoxicillin dosing.",
+      "pregnancy_category": "B",
+      "notes": "Prevents bacterial degradation of amoxicillin; causes diarrhea in high doses."
+    },
+    {
+      "name": "Pantoprazole",
+      "aliases": ["Panto"],
+      "drug_class": "Proton Pump Inhibitor (PPI)",
+      "adult_max_daily_mg": 80,
+      "geriatric_max_daily_mg": 40,
+      "pediatric_dose_mg_per_kg_dose": 1,
+      "pediatric_max_daily_mg_per_kg": 40,
+      "renal_notes": "No renal adjustment required.",
+      "pregnancy_category": "B",
+      "notes": "Reduces gastric acid. Take 30-60 mins before meals (BBF)."
+    },
+    {
+      "name": "Domperidone",
+      "aliases": [],
+      "drug_class": "Prokinetic / Antiemetic",
+      "adult_max_daily_mg": 30,
+      "geriatric_max_daily_mg": 20,
+      "pediatric_dose_mg_per_kg_dose": 0.25,
+      "pediatric_max_daily_mg_per_kg": 0.75,
+      "renal_notes": "Reduce frequency if eGFR < 30 mL/min.",
+      "pregnancy_category": "C",
+      "notes": "Risk of QT prolongation and cardiac arrhythmias, especially in elderly or with other QT-prolonging drugs."
+    },
+    {
+      "name": "Metformin",
+      "aliases": [],
+      "drug_class": "Biguanide Antidiabetic",
+      "adult_max_daily_mg": 2550,
+      "geriatric_max_daily_mg": 1500,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "eGFR 45-59: max 1000mg/day. eGFR 30-44: max 500-1000mg/day. eGFR < 30: CONTRAINDICATED due to high risk of fatal lactic acidosis.",
+      "pregnancy_category": "B",
+      "notes": "First-line Type 2 diabetes agent. Monitor renal panel regularly."
+    },
+    {
+      "name": "Glimepiride",
+      "aliases": [],
+      "drug_class": "Sulfonylurea Antidiabetic",
+      "adult_max_daily_mg": 8,
+      "geriatric_max_daily_mg": 2,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "High risk of prolonged severe hypoglycemia in renal impairment; use conservative dosing or switch to DPP4i.",
+      "pregnancy_category": "C",
+      "notes": "Stimulates insulin release from pancreatic beta cells."
+    },
+    {
+      "name": "Telmisartan",
+      "aliases": [],
+      "drug_class": "Angiotensin II Receptor Blocker (ARB)",
+      "adult_max_daily_mg": 80,
+      "geriatric_max_daily_mg": 40,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Risk of hyperkalemia and acute decline in GFR. Contraindicated in bilateral renal artery stenosis.",
+      "pregnancy_category": "D",
+      "notes": "Black box warning: contraindicated in pregnancy (fetal toxicity)."
+    },
+    {
+      "name": "Hydrochlorothiazide",
+      "aliases": ["HCTZ"],
+      "drug_class": "Thiazide Diuretic",
+      "adult_max_daily_mg": 50,
+      "geriatric_max_daily_mg": 25,
+      "pediatric_dose_mg_per_kg_dose": 1,
+      "pediatric_max_daily_mg_per_kg": 2,
+      "renal_notes": "Ineffective if eGFR < 30 mL/min; use loop diuretics (furosemide) instead.",
+      "pregnancy_category": "B",
+      "notes": "Monitors serum sodium, potassium and uric acid."
+    },
+    {
+      "name": "Amlodipine",
+      "aliases": [],
+      "drug_class": "Calcium Channel Blocker (DHP)",
+      "adult_max_daily_mg": 10,
+      "geriatric_max_daily_mg": 5,
+      "pediatric_dose_mg_per_kg_dose": 0.1,
+      "pediatric_max_daily_mg_per_kg": 0.3,
+      "renal_notes": "No renal adjustment required.",
+      "pregnancy_category": "C",
+      "notes": "Commonly causes peripheral ankle edema."
+    },
+    {
+      "name": "Aspirin",
+      "aliases": ["Acetylsalicylic Acid", "ASA"],
+      "drug_class": "Antiplatelet / Salicylate",
+      "adult_max_daily_mg": 325,
+      "geriatric_max_daily_mg": 150,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Avoid high doses in CKD; increases risk of worsening renal perfusion.",
+      "pregnancy_category": "D",
+      "notes": "CONTRAINDICATED in children/adolescents with viral infection due to Reye's syndrome."
+    },
+    {
+      "name": "Clopidogrel",
+      "aliases": [],
+      "drug_class": "P2Y12 Antiplatelet",
+      "adult_max_daily_mg": 75,
+      "geriatric_max_daily_mg": 75,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "No dosage adjustment needed.",
+      "pregnancy_category": "B",
+      "notes": "Prodrug requiring CYP2C19 activation. Caution with omeprazole."
+    },
+    {
+      "name": "Atorvastatin",
+      "aliases": [],
+      "drug_class": "Statin (HMG-CoA Reductase Inhibitor)",
+      "adult_max_daily_mg": 80,
+      "geriatric_max_daily_mg": 40,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "No dose adjustment required for renal insufficiency.",
+      "pregnancy_category": "X",
+      "notes": "Strictly contraindicated in pregnancy. Risk of myopathy/rhabdomyolysis."
+    },
+    {
+      "name": "Montelukast",
+      "aliases": [],
+      "drug_class": "Leukotriene Receptor Antagonist",
+      "adult_max_daily_mg": 10,
+      "geriatric_max_daily_mg": 10,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 5,
+      "renal_notes": "No adjustment required.",
+      "pregnancy_category": "B",
+      "notes": "Neuropsychiatric adverse events black box warning."
+    },
+    {
+      "name": "Levocetirizine",
+      "aliases": [],
+      "drug_class": "Antihistamine (2nd Gen)",
+      "adult_max_daily_mg": 10,
+      "geriatric_max_daily_mg": 5,
+      "pediatric_dose_mg_per_kg_dose": 0.125,
+      "pediatric_max_daily_mg_per_kg": 2.5,
+      "renal_notes": "eGFR 30-49: 2.5mg every 24h. eGFR 10-29: 2.5mg every 48h. eGFR < 10: Contraindicated.",
+      "pregnancy_category": "B",
+      "notes": "Less sedating than cetirizine."
+    },
+    {
+      "name": "Ciprofloxacin",
+      "aliases": ["Cipro"],
+      "drug_class": "Fluoroquinolone Antibiotic",
+      "adult_max_daily_mg": 1500,
+      "geriatric_max_daily_mg": 1000,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "eGFR 30-50: 250-500mg q12h. eGFR < 30: 250-500mg q18h.",
+      "pregnancy_category": "C",
+      "notes": "Tendon rupture and QT prolongation warnings. Avoid taking with divalent cations (Calcium, Iron, Antacids)."
+    },
+    {
+      "name": "Azithromycin",
+      "aliases": ["Azithro"],
+      "drug_class": "Macrolide Antibiotic",
+      "adult_max_daily_mg": 500,
+      "geriatric_max_daily_mg": 500,
+      "pediatric_dose_mg_per_kg_dose": 10,
+      "pediatric_max_daily_mg_per_kg": 10,
+      "renal_notes": "Use caution in severe renal impairment (eGFR < 10).",
+      "pregnancy_category": "B",
+      "notes": "Risk of QT interval prolongation, torsades de pointes."
+    },
+    {
+      "name": "Calcium Carbonate",
+      "aliases": ["Elemental Calcium", "Calcium"],
+      "drug_class": "Mineral Supplement / Antacid",
+      "adult_max_daily_mg": 2500,
+      "geriatric_max_daily_mg": 2000,
+      "pediatric_dose_mg_per_kg_dose": 25,
+      "pediatric_max_daily_mg_per_kg": 50,
+      "renal_notes": "Monitor calcium-phosphate product in CKD patients to prevent vascular calcification.",
+      "pregnancy_category": "C",
+      "notes": "Chelates fluoroquinolones, tetracyclines, and levothyroxine."
+    },
+    {
+      "name": "Vitamin D3",
+      "aliases": ["Cholecalciferol"],
+      "drug_class": "Vitamin",
+      "adult_max_daily_mg": 4000,
+      "geriatric_max_daily_mg": 4000,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 2000,
+      "renal_notes": "May require active vitamin D (calcitriol) in severe CKD.",
+      "pregnancy_category": "C",
+      "notes": "Strengths often given in IU. 1 mcg = 40 IU."
+    },
+    {
+      "name": "Serratiopeptidase",
+      "aliases": ["Serrapeptase"],
+      "drug_class": "Proteolytic Enzyme",
+      "adult_max_daily_mg": 30,
+      "geriatric_max_daily_mg": 30,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "No renal adjustment known.",
+      "pregnancy_category": "C",
+      "notes": "Anti-inflammatory and antiedemic enzyme widely combined in Indian NSAID formulations."
+    },
+    {
+      "name": "Tramadol",
+      "aliases": [],
+      "drug_class": "Opioid Analgesic",
+      "adult_max_daily_mg": 400,
+      "geriatric_max_daily_mg": 300,
+      "pediatric_dose_mg_per_kg_dose": 1,
+      "pediatric_max_daily_mg_per_kg": 2,
+      "renal_notes": "eGFR < 30: Increase dosing interval to 12h, max 200mg/day.",
+      "pregnancy_category": "C",
+      "notes": "Risk of seizures, serotonin syndrome with SSRIs/SNRIs, respiratory depression."
+    },
+    {
+      "name": "Tinidazole",
+      "aliases": [],
+      "drug_class": "Nitroimidazole Antimicrobial",
+      "adult_max_daily_mg": 2000,
+      "geriatric_max_daily_mg": 2000,
+      "pediatric_dose_mg_per_kg_dose": 50,
+      "pediatric_max_daily_mg_per_kg": 2000,
+      "renal_notes": "Supplemental dose after hemodialysis.",
+      "pregnancy_category": "C",
+      "notes": "Severe disulfiram-like reaction with alcohol. Metallic taste."
+    },
+    {
+      "name": "Ofloxacin",
+      "aliases": [],
+      "drug_class": "Fluoroquinolone Antibiotic",
+      "adult_max_daily_mg": 800,
+      "geriatric_max_daily_mg": 400,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "eGFR 20-50: 200-400mg q24h. eGFR < 20: 100-200mg q24h.",
+      "pregnancy_category": "C",
+      "notes": "Chelation with antacids and mineral supplements."
+    },
+    {
+      "name": "Ornidazole",
+      "aliases": [],
+      "drug_class": "Nitroimidazole Antimicrobial",
+      "adult_max_daily_mg": 1500,
+      "geriatric_max_daily_mg": 1000,
+      "pediatric_dose_mg_per_kg_dose": 25,
+      "pediatric_max_daily_mg_per_kg": 1000,
+      "renal_notes": "Use caution in end-stage renal disease.",
+      "pregnancy_category": "C",
+      "notes": "Commonly paired with fluoroquinolones for gastroenteritis in India."
+    },
+    {
+      "name": "Sildenafil",
+      "aliases": [],
+      "drug_class": "PDE-5 Inhibitor",
+      "adult_max_daily_mg": 100,
+      "geriatric_max_daily_mg": 50,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Start with 25mg in severe renal impairment (eGFR < 30).",
+      "pregnancy_category": "B",
+      "notes": "CONTRAINDICATED with nitrates due to profound fatal hypotension."
+    },
+    {
+      "name": "Nitroglycerin",
+      "aliases": ["Glyceryl Trinitrate", "GTN", "Sorbitrate", "ISDN"],
+      "drug_class": "Nitrate Vasodilator",
+      "adult_max_daily_mg": 20,
+      "geriatric_max_daily_mg": 10,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Use with caution.",
+      "pregnancy_category": "C",
+      "notes": "Concomitant use with PDE-5 inhibitors is absolutely contraindicated."
+    },
+    {
+      "name": "Warfarin",
+      "aliases": ["Acitrom", "Nicoumalone"],
+      "drug_class": "Vitamin K Antagonist Anticoagulant",
+      "adult_max_daily_mg": 10,
+      "geriatric_max_daily_mg": 5,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Increased risk of bleeding in CKD; requires frequent INR monitoring.",
+      "pregnancy_category": "X",
+      "notes": "Extreme bleeding interaction with NSAIDs, antiplatelets, and several antibiotics."
+    },
+    {
+      "name": "Omeprazole",
+      "aliases": [],
+      "drug_class": "Proton Pump Inhibitor (PPI)",
+      "adult_max_daily_mg": 40,
+      "geriatric_max_daily_mg": 40,
+      "pediatric_dose_mg_per_kg_dose": 1,
+      "pediatric_max_daily_mg_per_kg": 20,
+      "renal_notes": "No renal dose adjustment needed.",
+      "pregnancy_category": "C",
+      "notes": "Potent CYP2C19 inhibitor; significantly attenuates clopidogrel antiplatelet activation."
+    },
+    {
+      "name": "Ramipril",
+      "aliases": [],
+      "drug_class": "ACE Inhibitor",
+      "adult_max_daily_mg": 10,
+      "geriatric_max_daily_mg": 5,
+      "pediatric_dose_mg_per_kg_dose": 0,
+      "pediatric_max_daily_mg_per_kg": 0,
+      "renal_notes": "Initial dose 1.25mg if eGFR < 40. Contraindicated in bilateral renal artery stenosis.",
+      "pregnancy_category": "D",
+      "notes": "Risk of hyperkalemia, angioedema, persistent dry cough. Do not combine with ARBs."
+    }
+  ],
+  "brands": [
+    {
+      "brand_name": "Dolo 650",
+      "manufacturer": "Micro Labs Ltd",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Paracetamol", "strength_mg": 650}
+      ]
+    },
+    {
+      "brand_name": "Calpol 500",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Paracetamol", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Calpol 650",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Paracetamol", "strength_mg": 650}
+      ]
+    },
+    {
+      "brand_name": "Crocin Advance",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Paracetamol", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Crocin 650",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Paracetamol", "strength_mg": 650}
+      ]
+    },
+    {
+      "brand_name": "Combiflam",
+      "manufacturer": "Sanofi India Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Ibuprofen", "strength_mg": 400},
+        {"name": "Paracetamol", "strength_mg": 325}
+      ]
+    },
+    {
+      "brand_name": "Zerodol-P",
+      "manufacturer": "Ipca Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Aceclofenac", "strength_mg": 100},
+        {"name": "Paracetamol", "strength_mg": 325}
+      ]
+    },
+    {
+      "brand_name": "Zerodol-SP",
+      "manufacturer": "Ipca Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Aceclofenac", "strength_mg": 100},
+        {"name": "Paracetamol", "strength_mg": 325},
+        {"name": "Serratiopeptidase", "strength_mg": 15}
+      ]
+    },
+    {
+      "brand_name": "Zerodol 100",
+      "manufacturer": "Ipca Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Aceclofenac", "strength_mg": 100}
+      ]
+    },
+    {
+      "brand_name": "Voveran SR 100",
+      "manufacturer": "Novartis / Morepen",
+      "form": "Tablet SR",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Diclofenac", "strength_mg": 100}
+      ]
+    },
+    {
+      "brand_name": "Voveran 50",
+      "manufacturer": "Novartis / Morepen",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Diclofenac", "strength_mg": 50}
+      ]
+    },
+    {
+      "brand_name": "Meftal-Spas",
+      "manufacturer": "Blue Cross Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Mefenamic Acid", "strength_mg": 250},
+        {"name": "Dicyclomine", "strength_mg": 10}
+      ]
+    },
+    {
+      "brand_name": "Meftal 500",
+      "manufacturer": "Blue Cross Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Mefenamic Acid", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Augmentin 625 Duo",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Amoxicillin", "strength_mg": 500},
+        {"name": "Clavulanic Acid", "strength_mg": 125}
+      ]
+    },
+    {
+      "brand_name": "Augmentin 375",
+      "manufacturer": "GlaxoSmithKline",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Amoxicillin", "strength_mg": 250},
+        {"name": "Clavulanic Acid", "strength_mg": 125}
+      ]
+    },
+    {
+      "brand_name": "Moxikind-CV 625",
+      "manufacturer": "Mankind Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Amoxicillin", "strength_mg": 500},
+        {"name": "Clavulanic Acid", "strength_mg": 125}
+      ]
+    },
+    {
+      "brand_name": "Pan 40",
+      "manufacturer": "Alkem Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Pantoprazole", "strength_mg": 40}
+      ]
+    },
+    {
+      "brand_name": "Pantocid 40",
+      "manufacturer": "Sun Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Pantoprazole", "strength_mg": 40}
+      ]
+    },
+    {
+      "brand_name": "Pan-D",
+      "manufacturer": "Alkem Laboratories",
+      "form": "Capsule SR",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Pantoprazole", "strength_mg": 40},
+        {"name": "Domperidone", "strength_mg": 30}
+      ]
+    },
+    {
+      "brand_name": "Pantocid DSR",
+      "manufacturer": "Sun Pharma",
+      "form": "Capsule SR",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Pantoprazole", "strength_mg": 40},
+        {"name": "Domperidone", "strength_mg": 30}
+      ]
+    },
+    {
+      "brand_name": "Omez 20",
+      "manufacturer": "Dr. Reddy's Laboratories",
+      "form": "Capsule",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Omeprazole", "strength_mg": 20}
+      ]
+    },
+    {
+      "brand_name": "Glycomet 500",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Metformin", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Glycomet 1000 SR",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet SR",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Metformin", "strength_mg": 1000}
+      ]
+    },
+    {
+      "brand_name": "Glycomet-GP 1",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Metformin", "strength_mg": 500},
+        {"name": "Glimepiride", "strength_mg": 1}
+      ]
+    },
+    {
+      "brand_name": "Glycomet-GP 2",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Metformin", "strength_mg": 500},
+        {"name": "Glimepiride", "strength_mg": 2}
+      ]
+    },
+    {
+      "brand_name": "Amaryl 1",
+      "manufacturer": "Sanofi India",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Glimepiride", "strength_mg": 1}
+      ]
+    },
+    {
+      "brand_name": "Amaryl 2",
+      "manufacturer": "Sanofi India",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Glimepiride", "strength_mg": 2}
+      ]
+    },
+    {
+      "brand_name": "Telma 40",
+      "manufacturer": "Glenmark Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Telmisartan", "strength_mg": 40}
+      ]
+    },
+    {
+      "brand_name": "Telma 80",
+      "manufacturer": "Glenmark Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Telmisartan", "strength_mg": 80}
+      ]
+    },
+    {
+      "brand_name": "Telma-H",
+      "manufacturer": "Glenmark Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Telmisartan", "strength_mg": 40},
+        {"name": "Hydrochlorothiazide", "strength_mg": 12.5}
+      ]
+    },
+    {
+      "brand_name": "Telmikind 40",
+      "manufacturer": "Mankind Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Telmisartan", "strength_mg": 40}
+      ]
+    },
+    {
+      "brand_name": "Cardace 5",
+      "manufacturer": "Sanofi India",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Ramipril", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Cardace 2.5",
+      "manufacturer": "Sanofi India",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Ramipril", "strength_mg": 2.5}
+      ]
+    },
+    {
+      "brand_name": "Amlovas 5",
+      "manufacturer": "Macleods Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Amlodipine", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Stamlo 5",
+      "manufacturer": "Dr. Reddy's Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Amlodipine", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Stamlo-T",
+      "manufacturer": "Dr. Reddy's Laboratories",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Amlodipine", "strength_mg": 5},
+        {"name": "Telmisartan", "strength_mg": 40}
+      ]
+    },
+    {
+      "brand_name": "Ecosprin 75",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet Gastro-resistant",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Aspirin", "strength_mg": 75}
+      ]
+    },
+    {
+      "brand_name": "Ecosprin 150",
+      "manufacturer": "USV Ltd",
+      "form": "Tablet Gastro-resistant",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Aspirin", "strength_mg": 150}
+      ]
+    },
+    {
+      "brand_name": "Clopilet 75",
+      "manufacturer": "Sun Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Clopidogrel", "strength_mg": 75}
+      ]
+    },
+    {
+      "brand_name": "Clavix 75",
+      "manufacturer": "Intas Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Clopidogrel", "strength_mg": 75}
+      ]
+    },
+    {
+      "brand_name": "Atorva 10",
+      "manufacturer": "Zydus Cadila",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Atorvastatin", "strength_mg": 10}
+      ]
+    },
+    {
+      "brand_name": "Atorva 20",
+      "manufacturer": "Zydus Cadila",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Atorvastatin", "strength_mg": 20}
+      ]
+    },
+    {
+      "brand_name": "Montair-LC",
+      "manufacturer": "Cipla Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Montelukast", "strength_mg": 10},
+        {"name": "Levocetirizine", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Telekast-L",
+      "manufacturer": "Lupin Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Montelukast", "strength_mg": 10},
+        {"name": "Levocetirizine", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Cifran 500",
+      "manufacturer": "Sun Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Ciprofloxacin", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Ciplox 500",
+      "manufacturer": "Cipla Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Ciprofloxacin", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Ciplox-TZ",
+      "manufacturer": "Cipla Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Ciprofloxacin", "strength_mg": 500},
+        {"name": "Tinidazole", "strength_mg": 600}
+      ]
+    },
+    {
+      "brand_name": "Oflox-OZ",
+      "manufacturer": "Cipla Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Ofloxacin", "strength_mg": 200},
+        {"name": "Ornidazole", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Zenflox-OZ",
+      "manufacturer": "Mankind Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Ofloxacin", "strength_mg": 200},
+        {"name": "Ornidazole", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Azithral 500",
+      "manufacturer": "Alembic Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Azithromycin", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Azee 500",
+      "manufacturer": "Cipla Ltd",
+      "form": "Tablet",
+      "schedule": "Schedule H1",
+      "ingredients": [
+        {"name": "Azithromycin", "strength_mg": 500}
+      ]
+    },
+    {
+      "brand_name": "Shelcal 500",
+      "manufacturer": "Torrent Pharmaceuticals",
+      "form": "Tablet",
+      "schedule": "OTC",
+      "ingredients": [
+        {"name": "Calcium Carbonate", "strength_mg": 500},
+        {"name": "Vitamin D3", "strength_mg": 0.00625}
+      ]
+    },
+    {
+      "brand_name": "Ultracet",
+      "manufacturer": "Janssen / Johnson & Johnson",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Tramadol", "strength_mg": 37.5},
+        {"name": "Paracetamol", "strength_mg": 325}
+      ]
+    },
+    {
+      "brand_name": "Manforce 50",
+      "manufacturer": "Mankind Pharma",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Sildenafil", "strength_mg": 50}
+      ]
+    },
+    {
+      "brand_name": "Sorbitrate 5",
+      "manufacturer": "Abbott Healthcare",
+      "form": "Sublingual Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Nitroglycerin", "strength_mg": 5}
+      ]
+    },
+    {
+      "brand_name": "Acitrom 2",
+      "manufacturer": "Abbott Healthcare",
+      "form": "Tablet",
+      "schedule": "Schedule H",
+      "ingredients": [
+        {"name": "Warfarin", "strength_mg": 2}
+      ]
+    }
+  ],
+  "drug_interactions": [
+    {
+      "drug_a": "Clopidogrel",
+      "drug_b": "Omeprazole",
+      "severity": "CRITICAL",
+      "mechanism": "Omeprazole strongly inhibits CYP2C19 hepatic enzyme required for bioactivation of Clopidogrel into its active antiplatelet thiol metabolite.",
+      "clinical_consequence": "Significantly attenuated platelet inhibition, leading to elevated risk of stent thrombosis, recurrent myocardial infarction, and ischemic stroke.",
+      "recommendation": "Switch Omeprazole to Pantoprazole (Pan 40) or Rabeprazole, which exhibit negligible CYP2C19 inhibition, or use an H2-receptor antagonist like Famotidine."
+    },
+    {
+      "drug_a": "Sildenafil",
+      "drug_b": "Nitroglycerin",
+      "severity": "CRITICAL",
+      "mechanism": "Synergistic enhancement of cyclic GMP-mediated vascular smooth muscle relaxation and systemic vasodilation.",
+      "clinical_consequence": "Profound, refractory, life-threatening hypotension, syncope, myocardial ischemia, and cardiogenic shock.",
+      "recommendation": "STRICTLY CONTRAINDICATED. Never co-prescribe Sildenafil with sublingual or oral nitrates (Sorbitrate / Nitroglycerin)."
+    },
+    {
+      "drug_a": "Telmisartan",
+      "drug_b": "Ramipril",
+      "severity": "CRITICAL",
+      "mechanism": "Dual renin-angiotensin-aldosterone system (RAAS) blockade combining an ARB and an ACE inhibitor.",
+      "clinical_consequence": "Significantly increased risk of acute kidney injury, severe hyperkalemia, and symptomatic hypotension without added cardiovascular benefit (ONTARGET trial).",
+      "recommendation": "Avoid dual RAAS blockade. Discontinue one agent and titrate monotherapy or add a complementary antihypertensive class (e.g. CCB like Amlodipine)."
+    },
+    {
+      "drug_a": "Ibuprofen",
+      "drug_b": "Aspirin",
+      "severity": "CRITICAL",
+      "mechanism": "Ibuprofen binds competitively and reversibly to platelet COX-1 catalytic channels, sterically blocking irreversible acetylation by Aspirin.",
+      "clinical_consequence": "Abolishes the cardioprotective antiplatelet effect of low-dose Aspirin, leaving the patient unprotected against coronary thrombosis; also causes synergistic gastroduodenal ulceration and bleeding.",
+      "recommendation": "Avoid regular concurrent use. If both are necessary, take immediate-release Aspirin at least 2 hours before or 8 hours after Ibuprofen, or substitute Paracetamol."
+    },
+    {
+      "drug_a": "Diclofenac",
+      "drug_b": "Aspirin",
+      "severity": "CRITICAL",
+      "mechanism": "Dual non-steroidal anti-inflammatory and antiplatelet synergy causing profound gastroduodenal mucosal damage and systemic platelet inhibition.",
+      "clinical_consequence": "Multi-fold increase in catastrophic upper gastrointestinal hemorrhage, peptic ulcer perforation, and blunted renal hemodynamics.",
+      "recommendation": "Avoid concurrent NSAID with antiplatelet therapy whenever possible. Add prophylactic high-dose PPI (Pantoprazole 40mg)."
+    },
+    {
+      "drug_a": "Aceclofenac",
+      "drug_b": "Aspirin",
+      "severity": "CRITICAL",
+      "mechanism": "Concomitant NSAID and Salicylate therapy multiplying gastrointestinal erosive injury and antiplatelet bleeding diathesis.",
+      "clinical_consequence": "Severe gastric hemorrhage, prolonged bleeding time, and acute prerenal azotemia.",
+      "recommendation": "Do not co-prescribe. Use topical analgesics or non-NSAID options (e.g., Paracetamol monotherapy up to safe ceiling) for pain management."
+    },
+    {
+      "drug_a": "Ibuprofen",
+      "drug_b": "Warfarin",
+      "severity": "CRITICAL",
+      "mechanism": "NSAID-induced gastrointestinal erosion and inhibition of platelet aggregation combined with oral vitamin K antagonist anticoagulation.",
+      "clinical_consequence": "High-velocity internal and GI bleeding, hematemesis, intracranial hemorrhage risk.",
+      "recommendation": "CONTRAINDICATED in routine outpatient care. Use Paracetamol for mild-to-moderate analgesia and closely monitor INR."
+    },
+    {
+      "drug_a": "Aceclofenac",
+      "drug_b": "Warfarin",
+      "severity": "CRITICAL",
+      "mechanism": "Potentiation of anticoagulant hypoprothrombinemic effect and gastric mucosal compromise.",
+      "clinical_consequence": "Massive gastrointestinal bleeding and elevated PT/INR.",
+      "recommendation": "Avoid combination. If indispensable, intensive INR monitoring and PPI coverage are mandatory."
+    },
+    {
+      "drug_a": "Telmisartan",
+      "drug_b": "Ibuprofen",
+      "severity": "MODERATE",
+      "mechanism": "Part of the 'Triple Whammy' nephrotoxic triad: ARB dilates efferent arteriole while NSAID constricts afferent arteriole, drastically reducing glomerular capillary hydrostatic pressure.",
+      "clinical_consequence": "Acute Kidney Injury (AKI), hyperkalemia, and blunting of Telmisartan antihypertensive efficacy.",
+      "recommendation": "Avoid NSAID in patients on Telmisartan, particularly in elderly or dehydrated individuals. Monitor serum creatinine and potassium within 1-2 weeks."
+    },
+    {
+      "drug_a": "Telmisartan",
+      "drug_b": "Aceclofenac",
+      "severity": "MODERATE",
+      "mechanism": "Prostaglandin synthesis inhibition by Aceclofenac counteracts ARB renal hemodynamics and natriuresis.",
+      "clinical_consequence": "Acute decline in renal function, fluid retention, worsening hypertension, hyperkalemia.",
+      "recommendation": "Limit duration to < 3-5 days; ensure adequate hydration and check renal markers."
+    },
+    {
+      "drug_a": "Ramipril",
+      "drug_b": "Ibuprofen",
+      "severity": "MODERATE",
+      "mechanism": "NSAID inhibits vasodilatory prostaglandins, impairing renal autoregulation preserved by ACE inhibition.",
+      "clinical_consequence": "Precipitation of acute renal failure and loss of blood pressure control.",
+      "recommendation": "Avoid chronic NSAIDs with ACE inhibitors. Consider acetaminophen or topical agents."
+    },
+    {
+      "drug_a": "Hydrochlorothiazide",
+      "drug_b": "Ibuprofen",
+      "severity": "MODERATE",
+      "mechanism": "NSAIDs inhibit intrarenal prostaglandin synthesis, reducing renal blood flow and antagonizing the natriuretic and diuretic efficacy of thiazides.",
+      "clinical_consequence": "Reduced blood pressure control and elevated risk of acute renal dysfunction.",
+      "recommendation": "Monitor blood pressure and renal function. Minimize NSAID duration."
+    },
+    {
+      "drug_a": "Ciprofloxacin",
+      "drug_b": "Calcium Carbonate",
+      "severity": "MODERATE",
+      "mechanism": "Polyvalent metal cation chelation: Calcium ions bind to Ciprofloxacin in the GI tract to form an insoluble, unabsorbable chelate complex.",
+      "clinical_consequence": "Reduces Ciprofloxacin oral bioavailability by up to 50-70%, risking therapeutic failure and antimicrobial resistance development.",
+      "recommendation": "Space administration: Administer Ciprofloxacin at least 2 hours before or 6 hours after Calcium Carbonate (Shelcal) or antacids."
+    },
+    {
+      "drug_a": "Ofloxacin",
+      "drug_b": "Calcium Carbonate",
+      "severity": "MODERATE",
+      "mechanism": "Divalent cation chelation markedly retarding GI absorption of Ofloxacin.",
+      "clinical_consequence": "Subtherapeutic antibiotic concentrations leading to bacterial treatment failure.",
+      "recommendation": "Separate intake by at least 2 hours before or 4-6 hours after the calcium formulation."
+    },
+    {
+      "drug_a": "Domperidone",
+      "drug_b": "Azithromycin",
+      "severity": "MODERATE",
+      "mechanism": "Additive cardiac potassium hERG channel blockade prolonging ventricular repolarization (QT interval).",
+      "clinical_consequence": "Increased risk of QT interval prolongation, cardiac arrhythmia, and Torsades de Pointes.",
+      "recommendation": "Caution in patients with cardiac disease, electrolyte abnormalities, or elderly. Monitor ECG if combination cannot be avoided."
+    },
+    {
+      "drug_a": "Domperidone",
+      "drug_b": "Ciprofloxacin",
+      "severity": "MODERATE",
+      "mechanism": "Additive cardiac QT prolongation risk from dual HERG-channel active medications.",
+      "clinical_consequence": "Ventricular arrhythmias and syncope, especially in patients with hypokalemia or baseline long QT.",
+      "recommendation": "Avoid combination when feasible; consider alternative antiemetic (e.g., Ondansetron with monitoring or Metoclopramide) or monitor baseline ECG."
+    },
+    {
+      "drug_a": "Glimepiride",
+      "drug_b": "Ciprofloxacin",
+      "severity": "MODERATE",
+      "mechanism": "Fluoroquinolones augment pancreatic insulin release and displace sulfonylureas from plasma protein binding.",
+      "clinical_consequence": "Severe, unpredictable, and refractory hypoglycemia.",
+      "recommendation": "Educate patient on hypoglycemia symptoms; increase blood glucose self-monitoring frequency while on Ciprofloxacin."
+    },
+    {
+      "drug_a": "Atorvastatin",
+      "drug_b": "Azithromycin",
+      "severity": "MODERATE",
+      "mechanism": "Azithromycin weakly inhibits CYP3A4 and P-glycoprotein, increasing serum concentrations of Atorvastatin.",
+      "clinical_consequence": "Heightened risk of statin-induced myopathy, myalgia, and rhabdomyolysis.",
+      "recommendation": "Temporarily withhold Atorvastatin during short-course Azithromycin therapy or advise patient to promptly report unexplained muscle pain/dark urine."
+    },
+    {
+      "drug_a": "Tramadol",
+      "drug_b": "Azithromycin",
+      "severity": "MODERATE",
+      "mechanism": "Potential additive QT interval prolongation and central nervous system depressant interactions.",
+      "clinical_consequence": "Elevated risk of cardiac arrhythmias and prolonged sedation.",
+      "recommendation": "Use lowest effective doses and monitor clinical response."
+    },
+    {
+      "drug_a": "Pantoprazole",
+      "drug_b": "Calcium Carbonate",
+      "severity": "MINOR",
+      "mechanism": "PPI suppression of gastric acid reduces solubilization and ionization of insoluble Calcium Carbonate.",
+      "clinical_consequence": "Modest reduction in calcium bioavailability; long-term PPI therapy with low calcium absorption is linked to bone mineral density decline.",
+      "recommendation": "Take Calcium Carbonate with meals to facilitate acid-independent absorption, or consider Calcium Citrate."
+    },
+    {
+      "drug_a": "Metformin",
+      "drug_b": "Pantoprazole",
+      "severity": "MINOR",
+      "mechanism": "Long-term PPI use combined with Metformin can potentiate Vitamin B12 malabsorption.",
+      "clinical_consequence": "Gradual development of macrocytic anemia or peripheral neuropathy over prolonged therapy (>1-2 years).",
+      "recommendation": "Screen serum Vitamin B12 levels periodically in patients on long-term combined therapy."
+    }
+  ],
+  "sample_prescriptions": [
+    {
+      "id": "case_1",
+      "title": "Hidden Combination Overdose (Fever & Back Pain)",
+      "badge": "Paracetamol & NSAID Duplication",
+      "patient": {
+        "age": 34,
+        "gender": "Male",
+        "weight_kg": 68,
+        "egfr": 95,
+        "renal_status": "Normal",
+        "pregnant": false
+      },
+      "prescription_text": "Rx:\n1. Tab Dolo 650 1 tab TDS\n2. Tab Combiflam 1 tab BD\n3. Tab Zerodol-P 1 tab BD SOS\n4. Tab Pan 40 1 tab OD (BBF)",
+      "clinical_trap": "Combiflam contains Ibuprofen + Paracetamol (325mg). Zerodol-P contains Aceclofenac + Paracetamol (325mg). Along with Dolo 650 (650mg TDS = 1950mg), the cumulative daily Paracetamol hits 3,250mg - 3,900mg+, approaching the maximum hepatotoxic ceiling. Furthermore, concurrent Aceclofenac + Ibuprofen produces dual NSAID toxicity with high gastric ulcer and bleeding risk."
+    },
+    {
+      "id": "case_2",
+      "title": "The Elderly Diabetic 'Triple Whammy' AKI",
+      "badge": "Renal Failure & Lactic Acidosis Risk",
+      "patient": {
+        "age": 72,
+        "gender": "Female",
+        "weight_kg": 54,
+        "egfr": 26,
+        "renal_status": "Severe CKD (Stage 4)",
+        "pregnant": false
+      },
+      "prescription_text": "Rx:\n1. Tab Glycomet-GP 2 1 tab BD\n2. Tab Telma-H 1 tab OD\n3. Tab Combiflam 1 tab BD\n4. Tab Pantocid 40 1 tab OD",
+      "clinical_trap": "Patient has severe renal impairment (eGFR 26). Glycomet-GP contains Metformin 500mg, which is CONTRAINDICATED at eGFR < 30 due to fatal lactic acidosis risk. Telma-H (Telmisartan + HCTZ) + Combiflam (Ibuprofen) creates the infamous 'Triple Whammy' (Diuretic + ARB + NSAID), shutting down renal autoregulation and inducing Acute Kidney Injury (AKI)."
+    },
+    {
+      "id": "case_3",
+      "title": "Cardio-GI Danger & CYP2C19 Neutralization",
+      "badge": "Clopidogrel Blunting & Bleeding Risk",
+      "patient": {
+        "age": 58,
+        "gender": "Male",
+        "weight_kg": 76,
+        "egfr": 75,
+        "renal_status": "Normal",
+        "pregnant": false
+      },
+      "prescription_text": "Rx:\n1. Tab Clopilet 75 1 tab OD\n2. Tab Ecosprin 75 1 tab OD\n3. Tab Omez 20 1 tab OD\n4. Tab Voveran SR 100 1 tab OD SOS\n5. Tab Atorva 20 1 tab HS",
+      "clinical_trap": "Omeprazole (Omez) is a potent CYP2C19 inhibitor that prevents bioactivation of Clopidogrel (Clopilet), nullifying its antiplatelet protection after stent placement! Additionally, adding Diclofenac (Voveran) on top of dual antiplatelet therapy (Aspirin + Clopidogrel) skyrockets the risk of massive upper GI bleeding."
+    },
+    {
+      "id": "case_4",
+      "title": "Pediatric Upper Respiratory & Chelation Trap",
+      "badge": "Pediatric Dosing & Chelation",
+      "patient": {
+        "age": 8,
+        "gender": "Female",
+        "weight_kg": 24,
+        "egfr": 110,
+        "renal_status": "Normal",
+        "pregnant": false
+      },
+      "prescription_text": "Rx:\n1. Tab Cifran 500 1 tab BD\n2. Tab Shelcal 500 1 tab OD\n3. Tab Montair-LC 1 tab HS\n4. Tab Calpol 500 1 tab TDS",
+      "clinical_trap": "Ciprofloxacin (Cifran) is swallowed concurrently with Calcium (Shelcal 500), forming an unabsorbable chelate complex that cuts antibiotic efficacy in half. Additionally, Ciprofloxacin is generally cautioned in children due to arthropathy/cartilage toxicity, and adult tablet Cifran 500 BD (1000mg/day) is an excessive dose for a 24kg child."
+    }
+  ]
+}
